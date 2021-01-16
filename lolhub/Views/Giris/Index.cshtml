@@ -1,0 +1,21 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model Giris
+
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<form class="m-1 p-1" asp-action="Index" method="post">
+
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+    <h3 class="form-signin-heading">@localizer["Hoş Geldin !"]</h3>
+    <hr class="colorgraph"><br>
+
+    <div class="form-group">
+        <input asp-for="KullaniciAd" class="form-control" placeholder="Kullanıcı Adı" />
+        <input type="password" asp-for="KullaniciSifre" class="form-control" placeholder="Şifre" />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Giris Yap" />&emsp;
+    <p1><a href="/Kullanici/KayitOl"><strong>@localizer["Kayıt Ol"]</strong></a></p1>
+</form>

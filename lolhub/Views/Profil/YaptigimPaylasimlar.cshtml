@@ -1,0 +1,45 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model YaptigimPaylasimlarListViewModel
+
+<br />
+<br />
+<div class="text-md-center">
+    <div style="color:dimgray">
+        <h3 class="form-signin-heading"><strong>@localizer["YAPTIĞIM PAYLAŞIMLAR"]</strong></h3>
+        <hr class="colorgraph">
+    </div>
+</div>
+<br />
+
+@foreach (var item in Model.benimPaylasimlarim)
+{
+    <div class="container">
+        <div class="p-3 mb-2 bg-secondary text-white">
+
+            <div class="col-sm-12"><h3 class="text-danger"><strong>@item.Baslik</strong></h3></div><br />
+
+
+            @if (item.GLink != null)
+            {
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><img src="@item.GLink" class="img-thumbnail" alt="Cinque Terre"> </div>
+                <div class="col-sm-4"></div><br />
+            }
+
+            <div class="col-sm-12"><strong>@item.Icerik</strong></div><br />
+
+            @if (item.VLink != null)
+            {
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="@item.VLink"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div><br />
+            }
+
+
+        </div>
+    </div>
+}

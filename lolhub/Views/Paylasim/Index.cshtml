@@ -1,0 +1,68 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model PaylamsimListViewModel
+
+@if (User.Identity.IsAuthenticated)
+{
+    <br />
+    <div class="container">
+        <div class="wrapper">
+            <form asp-controller="Paylasim" asp-action="PaylasimYap" method="post" name="Login_Form" class="form-signin">
+                <h4 class="form-signin-heading">@localizer["Paylaşım Yap"]</h4>
+
+                <input type="text" class="form-control" name="Baslik" placeholder="Başlığınız" required autofocus />
+                <input type="text" class="form-control" name="Icerik" placeholder="İçeriğiniz" required />
+                <input type="text" class="form-control" name="VLink" placeholder="(OPSİYONEL) Paylaşmak İstediğiniz Youtube Embed Video Linki" />
+                <input type="text" class="form-control" name="GLink" placeholder="(OPSİYONEL) Paylaşmak İstediğiniz Görsel Linki" />
+
+                <button class="btn btn-dark" name="Submit" value="Paylas" type="Submit">@localizer["PAYLAŞ"]</button>
+            </form>
+        </div>
+    </div>
+    <br />
+    <br />
+}
+else
+{
+    <br />
+    <div class="container">
+        <a href="/Kullanici/KayitOl" class="btn btn-danger" role="button">@localizer["Paylaşım Yapmak İçin Kayıt Olunuz !"]</a>
+    </div>
+    <br />
+    <br />
+}
+
+
+@foreach (var item in Model.Paylasims)
+{
+    <div class="container">
+        <div class="p-3 mb-2 bg-secondary text-white">
+
+            <div class="col-sm-12"><strong><p1 class="text-warning">@localizer["Paylaşan"] : @item.KullaniciAd</p1></strong></div><br />
+
+            <div class="col-sm-12"><h3 class="text-danger"><strong>@item.Baslik</strong></h3></div><br />
+
+
+            @if (item.GLink != null)
+            {
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><img src="@item.GLink" class="img-thumbnail" alt="Cinque Terre"> </div>
+                <div class="col-sm-4"></div><br />
+            }
+
+            <div class="col-sm-12"><strong>@item.Icerik</strong></div><br />
+
+            @if (item.VLink != null)
+            {
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="@item.VLink"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div><br />
+            }
+
+
+        </div>
+    </div>
+}

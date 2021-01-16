@@ -1,0 +1,18 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "ANASAYFA";
+}
+<br />
+<br />
+<br />
+<br />
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <h1 class="display-4"><strong>@localizer["LoLHUB"]</strong></h1>
+            <h1 class="display-4"><strong>@localizer["Hoş geldin"]</strong></h1><br />
+            <h2><a href="/Paylasim/Index"><strong>@localizer["KEŞFETMEYE BAŞLA"]</strong></a></h2>
+        </div>
+    </div>
+</div>
+

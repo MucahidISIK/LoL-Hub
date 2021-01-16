@@ -12,7 +12,7 @@ Features :
 - Admin dashboard
 - Code first database design
 
-Created with SSMS
+
 
 Partners : 
 https://github.com/HuseyinHira  ,  https://github.com/ibrahimcansun

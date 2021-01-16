@@ -10,3 +10,9 @@ Features :
 - Responsive web design
 - English, Turkish and German language options
 - Admin dashboard
+
+Partners : 
+https://github.com/HuseyinHira  ,  https://github.com/ibrahimcansun
+.
+
+

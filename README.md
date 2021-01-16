@@ -12,7 +12,7 @@ Features :
 - Admin dashboard
 - Code first database design
 
-
+"Microsoft SQL Server Management Studio 18" was used in this project.
 
 Partners : 
 https://github.com/HuseyinHira  ,  https://github.com/ibrahimcansun

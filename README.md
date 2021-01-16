@@ -1,9 +1,12 @@
 # LOLHUB
 
-A website that allows users to share 
+A website that allows registered members submit content to the site such as links, text posts, images and videos.
 
+The main feature of the website is discover page which is the list of all contents that uploaded on the website.
 
 Features :
 - authorization
 - authentication
-- Responsivebility
+- Responsive web design
+- English, Turkish and German language options
+- Admin dashboard

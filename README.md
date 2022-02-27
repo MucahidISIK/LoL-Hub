@@ -1,6 +1,6 @@
 # LOLHUB
 
-A website that allows registered members submit content to the site such as links, text posts, images and videos.
+A website where registered users can upload content such as links, texts , images and videos.
 
 The main feature of the website is discover page which is the list of all contents that uploaded on the website.
 
